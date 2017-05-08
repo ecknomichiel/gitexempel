@@ -16,10 +16,8 @@ namespace GitExempel
             }
 
             IEnumerable<string> query =
-                from mess in todaysMessages
-                where mess.Contains("was")
-                select mess.ToString();
-
+                todaysMessages.Where(mess => mess.Contains("is"))
+                                .Where(mess => mess.Length < 20);
             foreach (string s in query)
             {
                 Console.WriteLine(s);

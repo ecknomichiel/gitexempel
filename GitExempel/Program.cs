@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GitExempel
 {
@@ -11,7 +7,7 @@ namespace GitExempel
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-	        Console.WriteLine("Hello World 2!");
+	        Console.WriteLine("Hello World 2!"); //I think this is a bit uninspiring. Will replace by a MOTD
             Console.ReadKey();
         }
     }

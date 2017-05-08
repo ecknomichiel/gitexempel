@@ -8,6 +8,8 @@ namespace GitExempel
         {
             Console.WriteLine("Hello World!"); //comment rad 1
 	        Console.WriteLine("Hello World 2!"); //comment rad 2
+            Console.WriteLine("Hello World!"); //Tesst
+	        Console.WriteLine("Hello World 2!"); // Testkommentar 2000
             Console.ReadKey();
         }
     }

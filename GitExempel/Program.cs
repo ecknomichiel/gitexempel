@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GitExempel
 {
@@ -6,10 +8,22 @@ namespace GitExempel
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!"); //comment rad 1
-	        Console.WriteLine("Hello World 2!"); //comment rad 2
-            Console.WriteLine("Hello World!"); //Tesst
-	        Console.WriteLine("Hello World 2!"); // Testkommentar 2000
+            WordOfTheDay wotd = new WordOfTheDay();
+            string[] todaysMessages = new string[100];
+            for (int i = 0; i < 100; i++ )
+            {
+                todaysMessages[i] = wotd.Text;
+            }
+
+            IEnumerable<string> query =
+                from mess in todaysMessages
+                where mess.Contains("was")
+                select mess.ToString();
+
+            foreach (string s in query)
+            {
+                Console.WriteLine(s);
+            }
             Console.ReadKey();
         }
     }
